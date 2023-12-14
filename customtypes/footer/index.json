@@ -1,0 +1,106 @@
+{
+  "id": "footer",
+  "label": "Footer",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "background_image": {
+        "type": "Image",
+        "config": {
+          "label": "Background Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "terms_and_conditions_text": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Terms and Conditions Text",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,strong,em"
+        }
+      },
+      "logo": {
+        "type": "Image",
+        "config": {
+          "label": "Logo",
+          "constraint": {
+            "height": 80
+          },
+          "thumbnails": []
+        }
+      },
+      "company_name": {
+        "type": "Text",
+        "config": {
+          "label": "Company Name",
+          "placeholder": ""
+        }
+      },
+      "privacy_policy_link": {
+        "type": "Link",
+        "config": {
+          "label": "Privacy Policy Link",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null
+        }
+      },
+      "terms_and_conditions_link": {
+        "type": "Link",
+        "config": {
+          "label": "Terms and Conditions Link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "whatsapp_link": {
+        "type": "Link",
+        "config": {
+          "label": "WhatsApp Link",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null
+        }
+      },
+      "whatsapp_icon_color": {
+        "type": "Color",
+        "config": {
+          "label": "Whatsapp Icon Color",
+          "placeholder": ""
+        }
+      },
+      "whatsapp_icon_background_color": {
+        "type": "Color",
+        "config": {
+          "label": "Whatsapp Icon Background Color",
+          "placeholder": ""
+        }
+      },
+      "medical_marketing_website_link": {
+        "type": "Link",
+        "config": {
+          "label": "Medical Marketing Website Link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "medical_marketing_website_link_text": {
+        "type": "Text",
+        "config": {
+          "label": "Medical Marketing Website Link Text",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}
