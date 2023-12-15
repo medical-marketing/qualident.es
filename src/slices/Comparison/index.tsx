@@ -126,7 +126,11 @@ const Comparison = ({ slice }: ComparisonProps): JSX.Element => {
             <>
               <div className="flex flex-wrap my-2">
                 <div className="w-[50%] px-1">
-                  <Card isFooterBlurred radius="none" className="border-none">
+                  <Card
+                    isFooterBlurred
+                    radius="none"
+                    className="border-none items-center"
+                  >
                     <PrismicNextImage field={image_1}></PrismicNextImage>
                     <CardFooter className="justify-between bg-gray-500/50 before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-none rounded-none bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
                       <p className="text-tiny mx-auto text-white/80">Before</p>
@@ -134,7 +138,11 @@ const Comparison = ({ slice }: ComparisonProps): JSX.Element => {
                   </Card>
                 </div>
                 <div className="w-[50%] px-1">
-                  <Card isFooterBlurred radius="none" className="border-none">
+                  <Card
+                    isFooterBlurred
+                    radius="none"
+                    className="border-none items-center"
+                  >
                     <PrismicNextImage field={image_2}></PrismicNextImage>
                     <CardFooter className="justify-between bg-gray-500/50 before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-none rounded-none bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
                       <p className="text-tiny mx-auto text-white ">After</p>

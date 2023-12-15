@@ -59,7 +59,7 @@
         "config": {
           "label": "CTA Link",
           "placeholder": "",
-          "select": "media"
+          "select": null
         }
       },
       "cta_text_color": {

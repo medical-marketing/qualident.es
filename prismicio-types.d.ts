@@ -41,7 +41,7 @@ export type BackgroundOfSmallImagesDocument<Lang extends string = string> =
 /**
  * Content for Footer documents
  */
-interface FooterRDocumentData {
+interface FooterDocumentData {
   /**
    * Background Image field in *Footer*
    *
@@ -173,13 +173,13 @@ interface FooterRDocumentData {
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type FooterRDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithUID<Simplify<FooterRDocumentData>, "footer", Lang>;
+export type FooterDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<FooterDocumentData>, "footer", Lang>;
 
 /**
  * Content for Header documents
  */
-interface HeaderRDocumentData {
+interface HeaderDocumentData {
   /**
    * Background Color field in *Header*
    *
@@ -238,13 +238,13 @@ interface HeaderRDocumentData {
   /**
    * CTA Link field in *Header*
    *
-   * - **Field Type**: Link to Media
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
    * - **API ID Path**: header.cta_link
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  cta_link: prismic.LinkToMediaField;
+  cta_link: prismic.LinkField;
 
   /**
    * CTA Text Color field in *Header*
@@ -267,8 +267,8 @@ interface HeaderRDocumentData {
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type HeaderRDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithUID<Simplify<HeaderRDocumentData>, "header", Lang>;
+export type HeaderDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<HeaderDocumentData>, "header", Lang>;
 
 /**
  * Content for iFrame documents
@@ -405,7 +405,7 @@ export type LandingPageDocument<Lang extends string = string> =
 /**
  * Content for Settings documents
  */
-interface SettingsRDocumentData {
+interface SettingsDocumentData {
   /**
    * Default Header field in *Settings*
    *
@@ -560,20 +560,20 @@ interface SettingsRDocumentData {
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type SettingsRDocument<Lang extends string = string> =
+export type SettingsDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<
-    Simplify<SettingsRDocumentData>,
+    Simplify<SettingsDocumentData>,
     "settings",
     Lang
   >;
 
 export type AllDocumentTypes =
   | BackgroundOfSmallImagesDocument
-  | FooterRDocument
-  | HeaderRDocument
+  | FooterDocument
+  | HeaderDocument
   | IframeDocument
   | LandingPageDocument
-  | SettingsRDocument;
+  | SettingsDocument;
 
 /**
  * Primary content in *Comparison → Primary*
@@ -1836,7 +1836,7 @@ declare module "@prismicio/client" {
   interface CreateClient {
     (
       repositoryNameOrEndpoint: string,
-      options?: prismic.ClientConfig
+      options?: prismic.ClientConfig,
     ): prismic.Client<AllDocumentTypes>;
   }
 
@@ -1845,17 +1845,17 @@ declare module "@prismicio/client" {
       BackgroundOfSmallImagesDocument,
       BackgroundOfSmallImagesDocumentData,
       BackgroundOfSmallImagesDocumentDataSlicesSlice,
-      FooterRDocument,
-      FooterRDocumentData,
-      HeaderRDocument,
-      HeaderRDocumentData,
+      FooterDocument,
+      FooterDocumentData,
+      HeaderDocument,
+      HeaderDocumentData,
       IframeDocument,
       IframeDocumentData,
       LandingPageDocument,
       LandingPageDocumentData,
       LandingPageDocumentDataSlicesSlice,
-      SettingsRDocument,
-      SettingsRDocumentData,
+      SettingsDocument,
+      SettingsDocumentData,
       AllDocumentTypes,
       ComparisonSlice,
       ComparisonSliceDefaultPrimary,
