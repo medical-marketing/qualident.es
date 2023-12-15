@@ -20,15 +20,6 @@
           "thumbnails": []
         }
       },
-      "terms_and_conditions_text": {
-        "type": "StructuredText",
-        "config": {
-          "label": "Terms and Conditions Text",
-          "placeholder": "",
-          "allowTargetBlank": true,
-          "multi": "paragraph,strong,em"
-        }
-      },
       "logo": {
         "type": "Image",
         "config": {
@@ -39,10 +30,26 @@
           "thumbnails": []
         }
       },
+      "terms_and_conditions_text": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Terms and Conditions Text",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,strong,em"
+        }
+      },
       "company_name": {
         "type": "Text",
         "config": {
           "label": "Company Name",
+          "placeholder": ""
+        }
+      },
+      "footer_text_color": {
+        "type": "Color",
+        "config": {
+          "label": "Footer Text Color",
           "placeholder": ""
         }
       },

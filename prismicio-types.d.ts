@@ -54,17 +54,6 @@ interface FooterDocumentData {
   background_image: prismic.ImageField<never>;
 
   /**
-   * Terms and Conditions Text field in *Footer*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: footer.terms_and_conditions_text
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  terms_and_conditions_text: prismic.RichTextField;
-
-  /**
    * Logo field in *Footer*
    *
    * - **Field Type**: Image
@@ -76,6 +65,17 @@ interface FooterDocumentData {
   logo: prismic.ImageField<never>;
 
   /**
+   * Terms and Conditions Text field in *Footer*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.terms_and_conditions_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  terms_and_conditions_text: prismic.RichTextField;
+
+  /**
    * Company Name field in *Footer*
    *
    * - **Field Type**: Text
@@ -85,6 +85,17 @@ interface FooterDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   company_name: prismic.KeyTextField;
+
+  /**
+   * Footer Text Color field in *Footer*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.footer_text_color
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  footer_text_color: prismic.ColorField;
 
   /**
    * Privacy Policy Link field in *Footer*

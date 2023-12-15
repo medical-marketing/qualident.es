@@ -9,7 +9,7 @@ type FooterProps = {
 };
 
 export default async function Footer({ uid }: FooterProps) {
-  // const settings = await getSettings();
+  const settings = await getSettings();
   const footer = await getFooter(uid);
 
   const {
@@ -18,6 +18,7 @@ export default async function Footer({ uid }: FooterProps) {
     company_name,
     medical_marketing_website_link,
     medical_marketing_website_link_text,
+    footer_text_color,
     privacy_policy_link,
     terms_and_conditions_link,
     terms_and_conditions_text,
@@ -26,6 +27,8 @@ export default async function Footer({ uid }: FooterProps) {
     whatsapp_icon_background_color,
   } = footer.data;
   // console.log("whatsapp icon link ", whatsapp_icon_link);
+
+  const { secondary_color } = settings.data;
   return (
     <>
       <footer>
@@ -42,28 +45,32 @@ export default async function Footer({ uid }: FooterProps) {
             as="div"
             className="relative py-[5rem] sm:py-[6rem] md:py-[6rem] lg:py-[8rem] px-4 md:px-6"
           >
-            <div className="opacity-75 text-sm text-center max-w-5xl mx-auto">
-              <PrismicRichText field={terms_and_conditions_text} />
-            </div>
-            <div className="flex justify-center my-4">
-              <PrismicNextImage field={logo} />
-            </div>
-            <div className="opacity-75 text-sm text-center mx-auto my-2">
-              Copyright {new Date().getFullYear()} {company_name}
-            </div>
-            <div className="text-sm opacity-75 text-center mx-auto my-2">
-              <PrismicNextLink field={privacy_policy_link}>
-                Privacy Policy
-              </PrismicNextLink>
-              {" | "}
-              <PrismicNextLink field={terms_and_conditions_link}>
-                Terms and Conditions
-              </PrismicNextLink>
-            </div>
-            <div className="absolute bottom-7 mobile:bottom-8 opacity-80 right-5 mobile:right-10">
-              <PrismicNextLink field={medical_marketing_website_link}>
-                {medical_marketing_website_link_text}
-              </PrismicNextLink>
+            <div
+              style={{ color: footer_text_color || secondary_color || "white" }}
+            >
+              <div className="opacity-75 text-sm text-center max-w-5xl mx-auto">
+                <PrismicRichText field={terms_and_conditions_text} />
+              </div>
+              <div className="flex justify-center my-4">
+                <PrismicNextImage field={logo} />
+              </div>
+              <div className="opacity-75 text-sm text-center mx-auto my-2">
+                Copyright {new Date().getFullYear()} {company_name}
+              </div>
+              <div className="text-sm opacity-75 text-center mx-auto my-2">
+                <PrismicNextLink field={privacy_policy_link}>
+                  Privacy Policy
+                </PrismicNextLink>
+                {" | "}
+                <PrismicNextLink field={terms_and_conditions_link}>
+                  Terms and Conditions
+                </PrismicNextLink>
+              </div>
+              <div className="absolute bottom-7 mobile:bottom-8 opacity-80 right-5 mobile:right-10">
+                <PrismicNextLink field={medical_marketing_website_link}>
+                  {medical_marketing_website_link_text}
+                </PrismicNextLink>
+              </div>
             </div>
           </Bounded>
           {whatsapp_link && whatsapp_link?.link_type != "Any" && (
