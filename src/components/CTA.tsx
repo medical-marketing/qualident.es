@@ -23,7 +23,7 @@ export default function CTA({ className, style, children, iframe }: CtaProps) {
     <>
       <button
         className={clsx(
-          "block w-full transition-colors duration-200 ease-in-out py-4 md:py-6 px-8 md:px-12 font-display font-semibold text-lg md:text-2xl text-center tracking-wide text-white bg-yellow-400 hover:bg-yellow-500",
+          "flex justify-center w-full transition-colors duration-200 ease-in-out py-4 md:py-6 px-8 md:px-12 font-display font-semibold text-lg md:text-2xl text-center tracking-wide text-white bg-yellow-400 hover:bg-yellow-500",
           className
         )}
         style={style}
