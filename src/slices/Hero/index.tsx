@@ -154,7 +154,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           <div className="image-div">
             <PrismicNextImage field={slice.primary.image} className="py-4" />
           </div>
-          <div className="cta-div mx-auto max-w-xl ">
+          <div className="cta-div mt-8 md:mt-16 mx-auto max-w-xl ">
             {slice.primary.cta_text?.length && (
               <Button
                 cta_link={slice.primary.cta_link}
