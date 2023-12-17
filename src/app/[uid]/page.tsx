@@ -40,7 +40,7 @@ export default async function Page({ params }: { params: Params }) {
   return (
     <>
       <Header uid={headerUID} />
-      <SliceZone slices={page.data.slices} components={components} />;
+      <SliceZone slices={page.data.slices} components={components} />
       <Footer uid={footerUID} />
     </>
   );
