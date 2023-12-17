@@ -162,6 +162,11 @@
 					"__TYPE__": "ExternalLink",
 					"url": "http://google.com"
 				}
+			},
+			"cta_style": {
+				"__TYPE__": "FieldContent",
+				"value": "Bordered",
+				"type": "Select"
 			}
 		},
 		"items": [
@@ -602,6 +607,11 @@
 					"__TYPE__": "ExternalLink",
 					"url": "http://google.com"
 				}
+			},
+			"cta_style": {
+				"__TYPE__": "FieldContent",
+				"value": "Default",
+				"type": "Select"
 			}
 		},
 		"items": [

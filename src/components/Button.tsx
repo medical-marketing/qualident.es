@@ -5,17 +5,17 @@ import { PrismicNextLink } from "@prismicio/next";
 import { getSettings } from "@/app/utils";
 
 type getButtonStylesProps = {
-  variant: "filled" | "bordered";
+  variant: string;
   cta_text_color?: string;
   cta_background_color?: string;
 };
 
 function getButtonStyles({
-  variant = "filled",
+  variant = "Filled",
   cta_text_color,
   cta_background_color,
 }: getButtonStylesProps) {
-  if (variant == "filled") {
+  if (variant == "Filled") {
     return {
       color: cta_text_color || "rgb(250,255,255)",
       backgroundColor: cta_background_color || "rgb(234,179,8)",
@@ -31,18 +31,37 @@ function getButtonStyles({
   }
 }
 
+type ButtonProps = {
+  cta_style?: string;
+
+  cta_link: any;
+  iframe: any;
+  className?: any;
+  children: any;
+};
+
 export default async function Button({
+  cta_style,
   cta_link,
   iframe,
   className,
   children,
-}: any) {
+}: ButtonProps) {
   const settings = await getSettings();
-  const { cta_background_color, cta_text_color, default_iframe } =
-    settings.data;
+  const {
+    cta_background_color,
+    cta_text_color,
+    default_iframe,
+    default_cta_style,
+  } = settings.data;
+
+  const _variant =
+    cta_style == "Default" || cta_style == undefined
+      ? default_cta_style
+      : cta_style;
 
   const theButtonStyles = getButtonStyles({
-    variant: "bordered",
+    variant: _variant,
     ...{ cta_background_color, cta_text_color },
   });
 

@@ -154,6 +154,7 @@ const Section3 = async ({ slice }: Section3Props): Promise<JSX.Element> => {
                     {cta_text?.length && (
                       <div className="cta-div">
                         <Button
+                          cta_style={slice.primary.cta_style}
                           cta_link={slice.primary.cta_link}
                           iframe={iframe}
                         >

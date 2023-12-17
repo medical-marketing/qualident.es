@@ -473,6 +473,18 @@ interface SettingsDocumentData {
   secondary_color: prismic.ColorField;
 
   /**
+   * Default CTA Style field in *Settings*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Filled
+   * - **API ID Path**: settings.default_cta_style
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  default_cta_style: prismic.SelectField<"Filled" | "Bordered", "filled">;
+
+  /**
    * CTA Text Color field in *Settings*
    *
    * - **Field Type**: Color
@@ -641,6 +653,17 @@ export interface ComparisonSliceDefaultPrimary {
   cta_link: prismic.LinkField;
 
   /**
+   * CTA Style field in *Comparison → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Default
+   * - **API ID Path**: comparison.primary.cta_style
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  cta_style: prismic.SelectField<"Default" | "Filled" | "Bordered", "filled">;
+
+  /**
    * After CTA Text field in *Comparison → Primary*
    *
    * - **Field Type**: Rich Text
@@ -696,6 +719,16 @@ export interface ComparisonSliceDefaultItem {
   image_1: prismic.ImageField<never>;
 
   /**
+   * Image 1 Text field in *Comparison → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: comparison.items[].image_1_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  image_1_text: prismic.KeyTextField;
+
+  /**
    * Image 2 field in *Comparison → Items*
    *
    * - **Field Type**: Image
@@ -704,6 +737,16 @@ export interface ComparisonSliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image_2: prismic.ImageField<never>;
+
+  /**
+   * Image 2 Text field in *Comparison → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: comparison.items[].image_2_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  image_2_text: prismic.KeyTextField;
 }
 
 /**
@@ -849,6 +892,17 @@ export interface HeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   cta_link: prismic.LinkField;
+
+  /**
+   * CTA Style field in *Hero → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Default
+   * - **API ID Path**: hero.primary.cta_style
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  cta_style: prismic.SelectField<"Default" | "Filled" | "Bordered", "filled">;
 
   /**
    * After CTA Text field in *Hero → Primary*
@@ -1148,6 +1202,17 @@ export interface Section1SliceDefaultPrimary {
   cta_link: prismic.LinkField;
 
   /**
+   * CTA Style field in *Section1 → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Default
+   * - **API ID Path**: section1.primary.cta_style
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  cta_style: prismic.SelectField<"Default" | "Filled" | "Bordered", "filled">;
+
+  /**
    * After CTA Text field in *Section1 → Primary*
    *
    * - **Field Type**: Rich Text
@@ -1281,6 +1346,17 @@ export interface Section2SliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   cta_link: prismic.LinkField;
+
+  /**
+   * CTA Style field in *Section2 → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Default
+   * - **API ID Path**: section2.primary.cta_style
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  cta_style: prismic.SelectField<"Default" | "Filled" | "Bordered", "filled">;
 
   /**
    * After CTA Text field in *Section2 → Primary*
@@ -1444,6 +1520,17 @@ export interface Section2SlicePointBlocksPrimary {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   cta_link: prismic.LinkField;
+
+  /**
+   * CTA Style field in *Section2 → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Default
+   * - **API ID Path**: section2.primary.cta_style
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  cta_style: prismic.SelectField<"Default" | "Filled" | "Bordered", "filled">;
 
   /**
    * After CTA Text field in *Section2 → Primary*
@@ -1654,6 +1741,17 @@ export interface Section3SliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   cta_link: prismic.LinkField;
+
+  /**
+   * CTA Style field in *Section3 → Items*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Default
+   * - **API ID Path**: section3.items[].cta_style
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  cta_style: prismic.SelectField<"Default" | "Filled" | "Bordered", "filled">;
 
   /**
    * After CTA Text field in *Section3 → Items*

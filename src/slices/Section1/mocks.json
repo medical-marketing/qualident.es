@@ -177,6 +177,11 @@
 					"__TYPE__": "ExternalLink",
 					"url": "http://twitter.com"
 				}
+			},
+			"cta_style": {
+				"__TYPE__": "FieldContent",
+				"value": "Bordered",
+				"type": "Select"
 			}
 		},
 		"items": []

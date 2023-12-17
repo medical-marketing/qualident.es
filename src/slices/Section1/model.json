@@ -80,6 +80,19 @@
             "select": null
           }
         },
+        "cta_style": {
+          "type": "Select",
+          "config": {
+            "label": "CTA Style",
+            "placeholder": "",
+            "options": [
+              "Default",
+              "Filled",
+              "Bordered"
+            ],
+            "default_value": "Default"
+          }
+        },
         "after_cta_text": {
           "type": "StructuredText",
           "config": {

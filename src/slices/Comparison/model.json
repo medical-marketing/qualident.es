@@ -53,6 +53,19 @@
             "select": null
           }
         },
+        "cta_style": {
+          "type": "Select",
+          "config": {
+            "label": "CTA Style",
+            "placeholder": "",
+            "options": [
+              "Default",
+              "Filled",
+              "Bordered"
+            ],
+            "default_value": "Default"
+          }
+        },
         "after_cta_text": {
           "type": "StructuredText",
           "config": {
@@ -97,12 +110,26 @@
             "thumbnails": []
           }
         },
+        "image_1_text": {
+          "type": "Text",
+          "config": {
+            "label": "Image 1 Text",
+            "placeholder": ""
+          }
+        },
         "image_2": {
           "type": "Image",
           "config": {
             "label": "Image 2",
             "constraint": {},
             "thumbnails": []
+          }
+        },
+        "image_2_text": {
+          "type": "Text",
+          "config": {
+            "label": "Image 2 Text",
+            "placeholder": ""
           }
         }
       }

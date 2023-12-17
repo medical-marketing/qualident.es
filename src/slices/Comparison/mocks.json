@@ -83,6 +83,11 @@
 					"__TYPE__": "ExternalLink",
 					"url": "https://prismic.io"
 				}
+			},
+			"cta_style": {
+				"__TYPE__": "FieldContent",
+				"value": "Default",
+				"type": "Select"
 			}
 		},
 		"items": [
@@ -139,6 +144,22 @@
 							"alt": null,
 							"__TYPE__": "ImageContent",
 							"thumbnails": {}
+						}
+					],
+					[
+						"image_1_text",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "remarkable",
+							"type": "Text"
+						}
+					],
+					[
+						"image_2_text",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "gone",
+							"type": "Text"
 						}
 					]
 				]

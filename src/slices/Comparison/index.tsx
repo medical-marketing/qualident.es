@@ -83,12 +83,15 @@ const Comparison = ({ slice }: ComparisonProps): JSX.Element => {
       after_cta_text,
       cta_text,
       cta_link,
+      cta_style,
       iframe,
       text_color,
       title,
       title_color,
     },
   } = slice;
+
+  // console.log("cta_style", cta_style);
 
   //@ts-ignore
   const backgroundOfSmallImagesUID = background_of_small_images?.uid;
@@ -122,42 +125,52 @@ const Comparison = ({ slice }: ComparisonProps): JSX.Element => {
         </div>
 
         <div className="image-div my-5">
-          {slice.items.map(({ image_1, image_2 }, index) => (
-            <>
-              <div className="flex flex-wrap my-2">
-                <div className="w-[50%] px-1">
-                  <Card
-                    isFooterBlurred
-                    radius="none"
-                    className="border-none items-center"
-                  >
-                    <PrismicNextImage field={image_1}></PrismicNextImage>
-                    <CardFooter className="justify-between bg-gray-500/50 before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-none rounded-none bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-                      <p className="text-tiny mx-auto text-white/80">Before</p>
-                    </CardFooter>
-                  </Card>
+          {slice.items.map(
+            ({ image_1, image_1_text, image_2, image_2_text }, index) => (
+              <>
+                <div className="flex justify-around flex-wrap my-2">
+                  <div className="w-[50%] !max-w-fit px-3 md:px-4">
+                    <Card
+                      isFooterBlurred
+                      radius="none"
+                      className="border-none items-center"
+                    >
+                      <PrismicNextImage field={image_1}></PrismicNextImage>
+                      {image_1_text && (
+                        <CardFooter className="justify-between bg-gray-500/50 before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-none rounded-none bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+                          <p className="text-tiny mx-auto text-white/80">
+                            {image_1_text}
+                          </p>
+                        </CardFooter>
+                      )}
+                    </Card>
+                  </div>
+                  <div className="w-[50%] !max-w-fit px-3 md:px-4">
+                    <Card
+                      isFooterBlurred
+                      radius="none"
+                      className="border-none items-center"
+                    >
+                      <PrismicNextImage field={image_2}></PrismicNextImage>
+                      {image_2_text && (
+                        <CardFooter className="justify-between bg-gray-500/50 before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-none rounded-none bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+                          <p className="text-tiny mx-auto text-white ">
+                            {image_2_text}
+                          </p>
+                        </CardFooter>
+                      )}
+                    </Card>
+                  </div>
                 </div>
-                <div className="w-[50%] px-1">
-                  <Card
-                    isFooterBlurred
-                    radius="none"
-                    className="border-none items-center"
-                  >
-                    <PrismicNextImage field={image_2}></PrismicNextImage>
-                    <CardFooter className="justify-between bg-gray-500/50 before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-none rounded-none bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-                      <p className="text-tiny mx-auto text-white ">After</p>
-                    </CardFooter>
-                  </Card>
-                </div>
-              </div>
-            </>
-          ))}
+              </>
+            )
+          )}
           {/* <PrismicNextImage field={slice.primary.image} className="py-4" /> */}
         </div>
         <div className="mx-[0rem] mobile:mx-[2rem] md:mx-[8rem]">
           <div className="cta-div mx-auto max-w-xl ">
             {cta_text?.length && (
-              <Button cta_link={cta_link} iframe={iframe}>
+              <Button cta_style={cta_style} cta_link={cta_link} iframe={iframe}>
                 {cta_text}
               </Button>
             )}
